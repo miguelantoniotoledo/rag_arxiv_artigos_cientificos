@@ -1,0 +1,18 @@
+# arXiv fetch configuration
+# - terms: list of search terms (OR across terms)
+# - max_results: maximum results to request from arXiv API
+# - start_date / end_date: inclusive YYYY-MM-DD date range to filter by publication date
+# - output_dir: where to save PDFs and metadata
+
+terms:
+  - "data warehouse"
+  - "artificial intelligence"
+max_results: 100
+start_date: "2019-01-01"
+end_date: "2026-12-31"
+output_dir: "data"
+# extract_mode: 'abstract' or 'fulltext'
+extract_mode: "fulltext"
+chunk_size: 1000
+chunk_overlap: 200
+embedding_model: "BAAI/bge-m3"
