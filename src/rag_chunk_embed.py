@@ -54,6 +54,10 @@ def main(cfg_path='config/arxiv_config.yaml'):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    if device.type == 'cuda':
+        print("[INFO] Usando GPU (CUDA) para embeddings.")
+    else:
+        print("[INFO] Usando CPU para embeddings.")
     model = model.to(device)
     try:
         model_max_length = tokenizer.model_max_length
@@ -162,6 +166,10 @@ def main(cfg_path='config/arxiv_config.yaml'):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    if device.type == 'cuda':
+        print("[INFO] Usando GPU (CUDA) para embeddings.")
+    else:
+        print("[INFO] Usando CPU para embeddings.")
     model = model.to(device)
     # Descobre o max_length do modelo
     try:
