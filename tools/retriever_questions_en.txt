@@ -1,0 +1,38 @@
+# Instructions for the model (grounding):
+- Answer only based on the context retrieved from the returned chunks.
+- Do not use external knowledge or make assumptions beyond what is explicitly in the chunks.
+- If there is not enough evidence in the retrieved chunks to answer the question, clearly refuse to answer, stating that there is not enough information in the context.
+
+---
+
+# 20 Direct Factual Questions about the Data
+
+1. What is the full name of the first author of the article "Orcheo: A Modular Full-Stack Platform for Conversational Search"?
+2. At which university does Maarten de Rijke work?
+3. What is the main goal of the Orcheo platform presented in the article?
+4. What are the two main barriers faced by conversational search researchers according to the article?
+5. What is the email address of Svitlana Vakulenko?
+6. In which city is the WU Vienna University of Economics and Business located?
+7. What embedding model was used to generate the chunk vectors?
+8. What was the date range used to search for articles in arXiv?
+9. How many chunks were generated from article 2602.14710v1?
+10. What is the text extraction mode set in the configuration (abstract or fulltext)?
+
+# Questions that require combining more than one chunk
+
+11. List all authors of article 2602.14710v1 and their respective affiliations.
+12. What are the steps of the conversational search pipeline described in the article?
+13. What search terms were used to collect articles from arXiv?
+14. Which universities are represented among the authors of the analyzed article?
+15. What are the main technical challenges mentioned for deploying conversational search systems?
+16. What are the chunking parameters used (chunk_size and chunk_overlap) and their values?
+17. What are the contact emails of the article's authors?
+18. Which cities are mentioned as locations of the authors' institutions?
+19. What are the main functions of the script rag_chunk_embed.py?
+20. What are the output files generated at each stage of the pipeline (fetch, extract, embed)?
+
+# Refusal test questions (no sufficient evidence)
+
+21. What is Maarten de Rijke's phone number?
+22. What is the impact factor of article 2602.14710v1?
+23. What is the access password for the Orcheo system?

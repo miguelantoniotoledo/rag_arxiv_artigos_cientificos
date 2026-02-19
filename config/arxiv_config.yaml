@@ -16,3 +16,5 @@ extract_mode: "fulltext"
 chunk_size: 1000
 chunk_overlap: 200
 embedding_model: "BAAI/bge-m3"
+# Número de chunks retornados pelo retriever FAISS
+retriever_top_k: 5
