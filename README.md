@@ -1,4 +1,4 @@
-# RAG Jogos de Inverno - Pipeline arXiv
+# RAG Arxiv - Artigos Cientificos - Pipeline arXiv
 
 Este projeto realiza o pipeline de busca, extração, processamento e embedding de artigos científicos da arXiv, com foco em temas parametrizáveis via YAML. O objetivo é preparar dados para sistemas de Recuperação Aumentada por Geração (RAG).
 
